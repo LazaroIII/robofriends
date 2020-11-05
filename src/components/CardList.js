@@ -1,13 +1,11 @@
 import React from 'react';
 import Card from './Card'
 
-const CardList = ({ robots }) => {
-
-    //const cardsArray = robots.map((user, i) => <Card key={i} id={robots[i]}/>);
-
+const CardList = ({ robots, type }) => {
+    let key = (type === 'robofriends') ? '' : '&&set=set2';
     return (
         <div>
-            {robots.map((user, i) => <Card key={i} id={robots[i]}/>)}
+            {robots.map((user, i) => <Card key={i} id={robots[i]} type={key}/>)}
         </div>
     )
 }
